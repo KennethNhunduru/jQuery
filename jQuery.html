@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+    
+    <script>
+        
+        /*The central concept behind jQuery is 'select a DOM element from an HTML document and 
+        then do something with the element using jQuery methods.'*/
+        //jQuery("DOM element").action is replaced by $("DOM element").action when we code using jQuery.
+        //This means we are targeting the "DOM element" and taking some "action" on it
+        
+        //When the 'document' element is ready(ie.,finished loading), we execute the append method.        
+        $("document").ready(function() {
+            
+            /* We target the 'html' element and add the code in the append function to the 'html' element. 
+            The backslash(\) in the code to be added means start a new line.*/
+            $("html").append(
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+
+            //We can use jQuery to add CSS to an HTML element. 
+            /*We target the 'p' element with id '#2' to add css code that 
+            changes the color of the element text to red*/
+            
+            $("#2").css ({"color": "red"}) ;
+            
+            /* The click() method attaches an event handler function to an HTML element. 
+            The function code to hide the h1 element is executed only when the user 
+            'clicks' on the p element with id '3'.*/
+            
+            $("#3").click (function () {
+            $("h1").hide ();
+            });
+        });           
+    </script>      
+        
+</html>

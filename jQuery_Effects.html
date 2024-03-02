@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-GB">    
+    <head>
+        <title>Element_Challenge</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>           
+    </head>
+
+    <script type="text/javascript">
+        /*The jQuery hide() method can be used to achieve effects by using the speed and callback parameters 
+        as follows: $(selector).hide(speed,callback); The optional speed parameter specifies the speed of the hiding, 
+        and can take the following values: "slow", "fast", or milliseconds. The optional callback parameter is a 
+        function to be executed after the hide() method completes.*/
+
+        //Here when a click event fires on a <p> element; the current <p> element GRADUALLY becomes hidden.
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("p").hide(1500);
+            });
+        });                    
+    </script> 
+    
+    <body>
+        <div class="challenge">
+            <h1>jQuery Effects.</h1>
+            <button>Click</button>
+            <p id="me1">
+                Who am I? Do I belong here?
+            </p>
+            <p id="me2">
+                What did I ever do wrong to be sent into this world?
+            </p>
+            <p id="me3">
+                Please take me away from here!
+            </p>
+        </div>               
+    </body>
+</html>
